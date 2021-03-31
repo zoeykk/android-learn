@@ -14,7 +14,7 @@ import com.h.androidlearn.bean.Fruit;
 
 import java.util.List;
 
-public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
+public class FruitHorizontalAdapter extends RecyclerView.Adapter<FruitHorizontalAdapter.ViewHolder> {
   private List<Fruit> mFruitList;
 
   static class ViewHolder extends RecyclerView.ViewHolder {
@@ -28,7 +28,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     }
   }
 
-  public FruitAdapter(List<Fruit> mFruitList) {
+  public FruitHorizontalAdapter(List<Fruit> mFruitList) {
     this.mFruitList = mFruitList;
   }
 
@@ -42,7 +42,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
   @NonNull
   @Override
   public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item, parent, false);
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_horizontal_item, parent, false);
     ViewHolder holder = new ViewHolder(view);
     return holder;
   }

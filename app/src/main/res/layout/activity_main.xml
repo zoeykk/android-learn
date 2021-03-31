@@ -8,21 +8,21 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="horizontal list"/>
-
-    <Button
         android:id="@+id/btn_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="vertical list"/>
+        android:text="vertical list" />
 
     <Button
-        android:id="@+id/btn_waterfall"
+        android:id="@+id/btn_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="waterfall list"/>
+        android:text="horizontal list" />
+
+    <Button
+        android:id="@+id/btn_staggered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="staggered list" />
 
 </LinearLayout>

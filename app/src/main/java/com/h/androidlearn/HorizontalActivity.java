@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.h.androidlearn.adapter.FruitAdapter;
+import com.h.androidlearn.adapter.FruitHorizontalAdapter;
 import com.h.androidlearn.bean.Fruit;
 
 import java.util.ArrayList;
@@ -18,13 +18,15 @@ public class HorizontalActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_horizontal);
+    setContentView(R.layout.activity_layout);
     initFruits();
     RecyclerView recyclerView = findViewById(R.id.recycler_view);
     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+    // set horizontal layout
+    linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
     recyclerView.setLayoutManager(linearLayoutManager);
-    FruitAdapter fruitAdapter = new FruitAdapter(mFruitList);
-    recyclerView.setAdapter(fruitAdapter);
+    FruitHorizontalAdapter fruitHorizontalAdapter = new FruitHorizontalAdapter(mFruitList);
+    recyclerView.setAdapter(fruitHorizontalAdapter);
   }
 
   private void initFruits() {
